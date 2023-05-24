@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-slate-400 py-20 px-20 grid gap-10">
+    <div className="bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
       <div className="bg-white p-6 rounded-3xl shadow-xl ">
         <span className="font-semibold text-3xl">Select Item</span>
         <div className="flex justify-between mb-2">
@@ -20,9 +20,13 @@ export default function Home() {
           <span>total</span>
           <span className="font-semibold">$38</span>
         </div>
-        <div className="mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-1/2 mx-auto">
+        <button
+          className="mt-5 bg-blue-500 text-white p-3 text-center rounded-xl w-1/2 mx-auto
+        hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500
+        "
+        >
           checkout
-        </div>
+        </button>
       </div>
       <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
         <div className="bg-blue-500 p-6 pb-14">
@@ -46,8 +50,42 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
-      <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
+      <div className="bg-white p-6 rounded-3xl shadow-xl">
+        <div className="flex justify-between items-center mb-5">
+          <span>⬅️</span>
+          <div className="space-x-3">
+            <span>⭐️4.7</span>
+            <span className="shadow-xl p-2 rounded-md">💖 </span>
+          </div>
+        </div>
+        <div className="bg-zinc-400 h-72 mb-5" />
+        <div>
+          <h3 className="font-medium text-xl">Swoon Lounge</h3>
+          <span className="text-xs text-gray-500">Chair</span>
+          <div className="mt-3 mb-5 flex justify-between items-center">
+            <div className="space-x-2">
+              <button className="w-5 h-5 rounded-full bg-yellow-500"></button>
+              <button className="w-5 h-5 rounded-full bg-indigo-500"></button>
+              <button className="w-5 h-5 rounded-full bg-teal-500"></button>
+            </div>
+            <div className="flex items-center space-x-5">
+              <button className="w-8  bg-blue-200 flex justify-center items-center aspect-square text-xl text-gray-500 rounded-lg">
+                -
+              </button>
+              <span>1</span>
+              <button className="w-8  bg-blue-200 flex justify-center items-center aspect-square text-xl text-gray-500 rounded-lg">
+                +
+              </button>
+            </div>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="font-medium text-2xl">4,600원</span>
+            <button className="px-8 py-2 bg-blue-500 text-center text-xs text-white rounded-lg">
+              장바구니 추가
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
