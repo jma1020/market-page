@@ -41,7 +41,7 @@ export default function Home() {
           checkout
         </button>
       </div>
-      <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+      <div className="bg-white overflow-hidden rounded-3xl shadow-xl group">
         <div className="bg-blue-500 p-6 pb-14">
           <h3 className="text-white text-2xl">Profile</h3>
         </div>
@@ -51,7 +51,7 @@ export default function Home() {
               <span className="text-sm text-gray-500">Orders</span>
               <p className="font-medium">340</p>
             </div>
-            <div className="w-24 h-24  bg-red-400 rounded-full" />
+            <div className="w-24 h-24  bg-red-400 rounded-full group-hover:bg-red-300 transition-colors " />
             <div className="flex flex-col items-center">
               <span className="text-sm text-gray-500">Orders</span>
               <p className="font-medium">340</p>
