@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import SVGIcon from "@/com/SVGIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div className="bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
+      <SVGIcon icon="CheckIcon" size={16} />
       <div className="bg-white p-6 rounded-3xl shadow-xl ">
         <span className="font-semibold text-3xl">Select Item</span>
 
